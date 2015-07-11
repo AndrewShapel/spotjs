@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha tests</title>
+    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="../spot.js" charset="utf-8"></script>
+    <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+    <script src="https://raw.githubusercontent.com/shouldjs/should.js/master/should.min.js"></script>
+
+    <script>mocha.setup('bdd');</script>
+    <script src="test.cache.js"></script>
+    <script src="test.config.js"></script>
+    <script src="test.insert.js"></script>
+    <script>
+      mocha.checkLeaks();
+      mocha.globals(['Spot']);
+      mocha.run();
+    </script>
+  </body>
+</html>
